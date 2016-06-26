@@ -434,10 +434,11 @@ carrito.car();
         tipo : 'Visitados'
     },
     {
-        city : 'Location 5',
-        desc : 'Test',
-        lat : 52.241874,
-        long : -0.883568,
+      
+        city : 'Tienda Patito',
+        desc : 'Color:Amarillo',
+        lat : -2.121692,
+        long : -79.901609,
         tipo : 'Visitados'    
     }
 ];
@@ -503,6 +504,12 @@ carrito.car();
        var flightPlanCoordinates = [
     new google.maps.LatLng(-2.1165618, -79.899291),
     new google.maps.LatLng(-2.1652592, -79.8957129)
+  ];
+       
+       
+       var flightPlanCoordinates2 = [
+    new google.maps.LatLng(-2.1652592, -79.8957129),
+    new google.maps.LatLng(-2.121692, -79.901609)
   ]; 
         
         
@@ -515,6 +522,17 @@ carrito.car();
   });
 
   flightPath.setMap(map);
+  
+  
+        var flightPath2 = new google.maps.Polyline({
+    path: flightPlanCoordinates2,
+    geodesic: true,
+    strokeColor: '#ffe168',
+    strokeOpacity: 1.0,
+    strokeWeight: 2
+  });
+
+  flightPath2.setMap(map);
         
        //var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 
